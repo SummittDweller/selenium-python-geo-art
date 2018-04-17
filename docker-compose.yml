@@ -1,0 +1,7 @@
+app:
+  build: .
+  volumes:
+    - "$PWD/root:/usr/src/app"
+    - "$HOME:/home"
+    - ./Inputs:/tmp/inputs
+    - ./Output:/tmp/output
