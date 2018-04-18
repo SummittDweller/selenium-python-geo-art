@@ -87,6 +87,7 @@ def init(default_timeout=10, screenshots_folder='/screenshots'):
     fp.set_preference("browser.helperApps.neverAsk.saveToDisk", "text/csv, application/vnd.ms-excel, application/octet-stream")
     fp.set_preference("browser.download.dir", download_path)
     driver = webdriver.Firefox(firefox_profile=fp)
+    driver.implicitly_wait(10)  # seconds
     waiter = Waiter(driver, screenshots_folder, default_timeout)
     selector = ElementCSSSelector(driver)
     return driver, waiter, selector, download_path

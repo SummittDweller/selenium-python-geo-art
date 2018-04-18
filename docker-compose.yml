@@ -5,3 +5,6 @@ app:
     - "$HOME:/home"
     - ./Inputs:/tmp/inputs
     - ./Output:/tmp/output
+    - ./screenshots:/screenshots
+  environment:
+    RESOLUTION: '1920x1600x24'
